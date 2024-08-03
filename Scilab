@@ -1,0 +1,20 @@
+function integer = UniformInt(a, b)
+    integer =  min( floor( rand()*(b-a) ) + a , b);
+endfunction
+
+for i=1:5
+
+    x(i) = UniformInt(1,10);
+
+    if (x(i)<4) then
+        cost(i) = 15;
+
+        elseif (4<=x(i) && x(i)<=8) then
+        cost(i) = 27;
+
+        else
+        cost(i) = 35;
+
+    end
+
+end
